@@ -1,0 +1,46 @@
+<div class="jumbotron">
+    <h3><center>Welcome to todo's</center></h3>
+    <h4><center>Ramaining taks {{todos.length}}</center></h4>
+</div>
+
+<form class="form-horizontal">
+  <div class="form-group">
+    <div class="col-sm-10">
+         <div class="col-sm-8">
+             <input type="text" class="form-control" placeholder="New Task" ng-model="newTodo">
+         </div>
+          <div class="col-sm-2">
+             <button type="button" class="btn btn-primary" ng-click="save()">Create</button>
+         </div>
+    </div>
+  </div>
+</form>
+<br><br>
+<div class="col-md-10">
+    <table class="table borderless">
+        <tbody>
+            <tr ng-repeat="todo in todos">
+                <td class="col-md-7">
+                    <input type="checkbox" ng-model="deleted" ng-click="strike($index)">
+                    <span ng-class="{strike: deleted}">{{todo.name}}</span>
+                </td>
+                <td class="col-md-3">
+                    <button class="btn btn-danger" ng-click="remove($index)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+<!--New task
+<input type="text" ng-model="newTodo">
+<button ng-click="save()">Create</button>
+<div class="checkbox" ng-repeat="todo in todos">
+    <label>
+        <input type="checkbox" ng-model="deleted" ng-click="strike($index)">
+        <span ng-class="{strike: deleted}">{{todo.name}}</span>
+        <button ng-click="remove($index)">Delete</button>
+    </label>
+</div>-->

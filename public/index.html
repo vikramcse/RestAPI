@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="TodoApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Todo Application</title>
+    <base href="/">
+    <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Todo's</a>
+            </div>
+        </div>
+    </nav>
+    <br><br><br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12" ng-view></div>
+        </div>
+    </div>
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular-route/angular-route.min.js"></script>
+    <script src="lib/angular-resource/angular-resource.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/controller.js"></script>
+    <script src="js/factories.js"></script>
+</body>
+
+</html>
